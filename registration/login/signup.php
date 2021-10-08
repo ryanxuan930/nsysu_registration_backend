@@ -6,7 +6,7 @@ require("../../database.php");
 if(isset($_POST["dept"])){
     $dept = $_POST["dept"];
 }else{
-    echo $_POST;
+    print_r($_POST);
     echo "dept";
     exit();
 }
