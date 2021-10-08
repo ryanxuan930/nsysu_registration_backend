@@ -17,7 +17,7 @@ if(isset($_POST["email"]) and filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)
     exit();
 }
 if(isset($_POST["stu_id"]) and strlen($_POST["stu_id"])==10){
-    $account = $_POST["stu_id"];
+    $stu_id= $_POST["stu_id"];
 }else{
     echo "account";
     exit();
