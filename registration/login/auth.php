@@ -21,12 +21,6 @@ if(isset($_POST["password"])){
     $dataset["status"]="invalid_password";
     goto endpoint;
 }
-if(isset($_POST["dept"]) and strlen($_POST["dept"])==3){
-    $org = htmlspecialchars($_POST["dept"]);
-}else{
-    $dataset["status"]="invalid_dept";
-    goto endpoint;
-}
 $time = time();
 $conn->select_db("sep3");
 echo $conn->error;
