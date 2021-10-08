@@ -24,7 +24,7 @@ if(isset($_POST["password"])){
 $time = time();
 $conn->select_db("sep3");
 echo $conn->error;
-$stmt = $conn->prepare("SELECT * FROM member WHERE account=?");
+$stmt = $conn->prepare("SELECT * FROM member WHERE stu_id=?");
 echo $conn->error;
 $stmt->bind_param("s",$account);
 $stmt->execute();
