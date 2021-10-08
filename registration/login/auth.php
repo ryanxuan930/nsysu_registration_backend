@@ -34,7 +34,7 @@ if($result->num_rows){
         $hash = $row["password"];
         if(password_verify($password,$hash)){
             $dataset["status"]="welcome";
-            $dataset["token"]=tokenEncrypt($account,$dept,$ip,$time);
+            $dataset["token"]=tokenEncrypt($account,$row["dept"],$ip,$time);
             goto endpoint;
         }else{
             $dataset["status"]="wrong_password";
