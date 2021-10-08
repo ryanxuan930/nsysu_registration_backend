@@ -37,18 +37,13 @@ $stmt->execute();
 $result = $stmt->get_result();
 if($result->num_rows){
     while($row = $result->fetch_assoc()){
-        if($row["permission"]==1){
-            $hash = $row["password"];
-            if(password_verify($password,$hash)){
-                $dataset["status"]="welcome";
-                $dataset["token"]=tokenEncrypt($account,$dept,$ip,$time);
-                goto endpoint;
-            }else{
-                $dataset["status"]="wrong_password";
-                goto endpoint;
-            }
+        $hash = $row["password"];
+        if(password_verify($password,$hash)){
+            $dataset["status"]="welcome";
+            $dataset["token"]=tokenEncrypt($account,$dept,$ip,$time);
+            goto endpoint;
         }else{
-            $dataset["status"]="not_verified";
+            $dataset["status"]="wrong_password";
             goto endpoint;
         }
     }
