@@ -1,5 +1,7 @@
 <?php
 header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: *");
+header("Access-Control-Allow-Headers: Origin, Methods, Content-Type");
 require("../../database.php");
 if(isset($_POST["dept"]) and strlen($_POST["dept"])==3){
     $org = $_POST["dept"];
