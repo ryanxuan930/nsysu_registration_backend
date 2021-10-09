@@ -16,7 +16,7 @@ if($result->num_rows){
 $db=0;
 $db = new database("sep3");
 $db->table("member");
-$result = $db->select_where(0,"account='{$data["account"]}'");
+$result = $db->select_where(0,"stu_id='{$data["account"]}'");
 if($result->num_rows){
     while($row = $result->fetch_assoc()){
         $dataset["name"] = $row["name"];
