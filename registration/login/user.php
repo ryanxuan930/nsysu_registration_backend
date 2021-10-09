@@ -20,7 +20,7 @@ $result = $db->select_where(0,"stu_id='{$data["account"]}'");
 if($result->num_rows){
     while($row = $result->fetch_assoc()){
         $dataset["name"] = $row["name"];
-        $dataset["stu_id"] = $row["sdu_id"];
+        $dataset["stu_id"] = $row["stu_id"];
         $dataset["g_year"] = $row["g_year"];
         $dataset["sex_title"] = sex($row["sex"]);
         $dataset["sex"] = $row["sex"];
