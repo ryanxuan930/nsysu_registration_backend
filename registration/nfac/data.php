@@ -21,7 +21,6 @@ $stmt = $conn->prepare("INSERT INTO nfac_main (stu_id, sex, event) VALUES (?,?,?
 $e = 0;
 $stmt->bind_param("sis",$token_data["account"],$sex,$e);
 foreach($event as $value){
-    echo $value;
     $e = $value;
     $stmt->execute();
     if($conn->error){
