@@ -1,12 +1,9 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: *");
-header("Access-Control-Allow-Headers: Origin, Methods, Content-Type");
 require("../../database.php");
 if(isset($_POST["dept"])){
     $dept = $_POST["dept"];
 }else{
-    print_r($_POST);
     echo "dept";
     exit();
 }
