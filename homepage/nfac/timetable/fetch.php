@@ -1,6 +1,6 @@
 <?php
 header('Access-Control-Allow-Origin: *');
-require("../../../../database.php");
+require("../../../database.php");
 $db = new database("sep3");
 $db->table("nfac_schedule");
 $result = $db->select_all();
