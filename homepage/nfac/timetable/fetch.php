@@ -8,6 +8,7 @@ $dataset = array();
 $i=0;
 while($row = $result->fetch_assoc()){
     $dataset[$i] = $row;
+    $i++;
 }
 $obj = json_encode($dataset);
 echo $obj;
